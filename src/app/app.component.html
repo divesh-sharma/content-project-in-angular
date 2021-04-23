@@ -1,0 +1,37 @@
+<hello name="{{ name }}"></hello>
+<p>
+	Start editing to see some magic happen :)
+</p>
+
+<app-input [inp]="html"></app-input>>
+<!-- example--1 -->
+<!-- Single slot projection example -->
+<!-- <app-input label="Email address" hint="Email address">
+  <input type="email" />
+</app-input> -->
+
+<!-- example--2 -->
+<!-- Multi-slot projection example -->
+<!-- <app-input label="Email address" hint="Email address">
+  <label>Email address</label>
+  <input type="email" />
+  <small>Email is required</small>
+  <p class="p-email">Enter email</p>
+  <div id="select-div">Select by id</div>
+  
+</app-input> -->
+
+<!-- example--3 -->
+<!-- Passign the component in projection -->
+<!-- <app-input>
+      <app-counter></app-counter>
+    </app-input> -->
+
+<!-- example--4 -->
+<!-- i want to use/create multiple radio button using ng-content -->
+<ng-template #radioTemplate let-name="name" let-n>
+	<input type="radio" [name]="name" />
+  {{n}}
+</ng-template>
+	<app-input [template]="radioTemplate" [values]="['male','female','other']" name="gender">
+	</app-input>

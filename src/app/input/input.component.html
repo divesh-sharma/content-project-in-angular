@@ -1,0 +1,26 @@
+<p>
+  {{inp}}
+</p>
+<!-- Single slot example -->
+<!-- <label>{{label}}</label>
+    <ng-content></ng-content>
+    <small>{{hint}}</small> -->
+
+<!-- Multi slot projection example -->
+<!-- <ng-content select="label"></ng-content> -->
+<!-- We not mention anything so takes remaing content -->
+<!-- <ng-content></ng-content>
+    <ng-content select="small"></ng-content>
+    <ng-content select=".p-email"></ng-content>
+    <ng-content select="[id=select-div]"></ng-content> -->
+
+<!-- Multiple component rendering  -->
+<!-- <button (click)="toggle()">Toggle</button>
+<ng-content *ngIf="show"></ng-content> -->
+
+<!-- example --4 -->
+<div *ngFor="let value of values">
+  <ng-container
+    *ngTemplateOutlet="template;context:{$implicit:value,name:name}"
+  ></ng-container>
+</div>
